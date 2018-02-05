@@ -1,4 +1,4 @@
-import Vue from "vue/dist/vue.runtime.min";
+import Vue from "vue";
 import Main from "./main.vue";
 
 new Vue(Main).$mount("main");

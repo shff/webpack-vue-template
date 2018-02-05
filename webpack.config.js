@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   context: path.resolve(__dirname, "app"),
-  entry: [ "./app.js" ],
+  entry: [ "./app.ts" ],
   output: {
     path: path.resolve(__dirname, "public"),
     filename: "app.js",
@@ -31,16 +31,9 @@ module.exports = {
         options: {
           extractCSS: true,
           loaders: {
-            js: {
-              loader: 'babel-loader',
-              options: {
-                presets: [[ "@babel/preset-env", {
-                  forceAllTransforms: true,
-                  useBuiltIns: "usage",
-                } ]],
-              },
-            },
+            js: "vue-ts-loader",
             file: "file-loader",
+            esModule: true,
           },
         },
       },
@@ -54,6 +47,17 @@ module.exports = {
             forceAllTransforms: true,
             useBuiltIns: "usage",
           } ]],
+        },
+      },
+      {
+        test: /\.tsx?$/,
+        loader: "ts-loader",
+        exclude: /node_modules/,
+        options: {
+          appendTsSuffixTo: [/\.vue$/],
+          compilerOptions: {
+            lib: [ "es2015" ],
+          },
         },
       },
       {

@@ -7,10 +7,11 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+  import Vue from "vue";
   import axios from "axios";
 
-  export default {
+  export default Vue.extend({
     data() {
       return {
         msg: "Hello? :)",
@@ -22,7 +23,7 @@
       const response = await axios.get("/");
       this.reslt = response.data;
     },
-  };
+  });
 </script>
 
 <style lang="stylus" scoped>
