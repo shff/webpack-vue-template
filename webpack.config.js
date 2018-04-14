@@ -5,11 +5,12 @@ const OptimizeCSSPlugin = require("optimize-css-assets-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  mode: process.env.NODE_ENV || "development",
   context: path.resolve(__dirname, "app"),
-  entry: [ "./app.js" ],
+  entry: [ "./main.js" ],
   output: {
     path: path.resolve(__dirname, "public"),
-    filename: "app.js",
+    filename: "main.js",
   },
   plugins: [
     new ExtractTextPlugin("app.css"),
@@ -34,10 +35,11 @@ module.exports = {
             js: {
               loader: 'babel-loader',
               options: {
-                presets: [[ "@babel/preset-env", {
-                  forceAllTransforms: true,
-                  useBuiltIns: "usage",
-                } ]],
+                presets: ["@babel/preset-env"],
+                plugins: [
+                  "@babel/plugin-proposal-optional-chaining",
+                  "@babel/plugin-transform-runtime",
+                ],
               },
             },
             file: "file-loader",
@@ -49,11 +51,11 @@ module.exports = {
         exclude: /(node_modules)/,
         loader: "babel-loader",
         query: {
-          compact: false,
-          presets: [[ "@babel/preset-env", {
-            forceAllTransforms: true,
-            useBuiltIns: "usage",
-          } ]],
+          presets: ["@babel/preset-env"],
+          plugins: [
+            "@babel/plugin-proposal-optional-chaining",
+            "@babel/plugin-transform-runtime",
+          ],
         },
       },
       {
