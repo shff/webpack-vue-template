@@ -3,6 +3,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSPlugin = require("optimize-css-assets-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const VueLoaderPlugin = require("vue-loader/lib/plugin");
 
 module.exports = {
   mode: process.env.NODE_ENV || "development",
@@ -16,6 +17,7 @@ module.exports = {
     new ExtractTextPlugin("app.css"),
     new UglifyJsPlugin(),
     new OptimizeCSSPlugin({ safe: true }),
+    new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "index.html",
@@ -33,7 +35,7 @@ module.exports = {
           extractCSS: true,
           loaders: {
             js: {
-              loader: 'babel-loader',
+              loader: "babel-loader",
               options: {
                 presets: ["@babel/preset-env"],
                 plugins: [
@@ -57,6 +59,21 @@ module.exports = {
             "@babel/plugin-transform-runtime",
           ],
         },
+      },
+      {
+        test: /\.stylus$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'stylus-loader'
+        ]
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'vue-style-loader',
+          'css-loader'
+        ]
       },
       {
         test: /\.(jpg|jpeg|png|gif|svg|eot|ttf|woff|woff2)$/i,
