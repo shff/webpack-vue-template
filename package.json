@@ -1,10 +1,15 @@
 {
   "license": "MIT",
   "scripts": {
-    "build": "webpack --mode production",
-    "watch": "webpack -w",
     "server": "webpack-dev-server --hot --inline",
-    "lint": "eslint app/**/*.js app/**/*.vue",
+    "watch": "webpack -w",
+    "build": "webpack --mode production",
+    "rebuild": "yarn clean && yarn build",
+    "clean": "rm -rf dist",
+    "prettify": "prettier --write app/*.js app/*.vue app/**/*.js app/**/*.vue",
+    "lint": "eslint app/*.js app/*.vue app/**/*.js app/**/*.vue",
+    "lint:css": "stylelint '**/*.less' '**/*.jsx' --syntax less",
+    "lint:watch": "esw app/*.js app/*.vue src/*.js* src/**/*.js* -w --color --clear",
     "test": "jest"
   },
   "dependencies": {
@@ -21,7 +26,7 @@
     "babel-loader": "^8.0.5",
     "css-loader": "^3.2.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "file-loader": "^4.2.0",
+    "file-loader": "^5.0.2",
     "html-webpack-plugin": "^3.2.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "stylus": "^0.54.7",
@@ -36,15 +41,26 @@
   },
   "optionalDependencies": {
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.4.0",
-    "eslint-config-airbnb": "^18.0.1",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-friendly-formatter": "^4.0.1",
     "eslint-plugin-html": "^6.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-vue": "^5.2.3",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-vue": "^6.1.2",
     "jest": "^24.9.0",
     "jest-vue-preprocessor": "^1.5.0",
-    "vue-eslint-parser": "^6.0.3"
+    "prettier": "^1.19.1",
+    "stylelint": "^12.0.1",
+    "stylelint-config-standard": "^19.0.0",
+    "vue-eslint-parser": "^7.0.0"
   },
+  "browserslist": [
+    ">0.25%",
+    "not ie 11",
+    "not op_mini all"
+  ],
   "jest": {
     "transform": {
       "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
@@ -56,12 +72,15 @@
   },
   "eslintConfig": {
     "extends": [
-      "eslint:recommended",
-      "plugin:vue/recommended",
-      "airbnb/base"
+      "plugin:vue/essential",
+      "plugin:prettier/recommended",
+      "plugin:promise/recommended",
+      "eslint:recommended"
     ],
     "plugins": [
-      "vue"
+      "vue",
+      "prettier",
+      "promise"
     ],
     "parserOptions": {
       "parser": "babel-eslint",
@@ -71,30 +90,15 @@
         "modules": true
       }
     },
+    "globals": {
+      "document": true
+    },
     "rules": {
-      "max-len": [
-        "error",
-        {
-          "code": 80
-        }
-      ],
-      "indent": "off",
       "import/no-unresolved": "off",
-      "vue/html-indent": [
-        "error",
-        2
-      ],
-      "vue/script-indent": [
-        "error",
-        2,
-        {
-          "baseIndent": 1
-        }
-      ],
-      "quotes": [
-        "error",
-        "double"
-      ]
+      "prettier/prettier": "error",
+      "promise/prefer-await-to-callbacks": "error",
+      "promise/prefer-await-to-then": "error",
+      "react/no-unknown-property": "off"
     }
   }
 }
