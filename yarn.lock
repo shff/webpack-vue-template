@@ -746,10 +746,10 @@
     levenary "^1.1.0"
     semver "^5.5.0"
 
-"@babel/preset-stage-1@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@babel/preset-stage-1/-/preset-stage-1-7.0.0.tgz#e06be32a4055739f355057473ccbbb969e52d12c"
-  integrity sha512-5uQtayYgYrdHJIpwN8c4FH1kIStsL2/n1EBs7UU/nctswPLHSNNDUaslYlJvMFqlB5tGejnXLKKj0Jn/+aitUw==
+"@babel/preset-stage-1@^7.8.0":
+  version "7.8.0"
+  resolved "https://registry.yarnpkg.com/@babel/preset-stage-1/-/preset-stage-1-7.8.0.tgz#052c9c6f9dd8ec848bdcf3ed4d3ce82ec34ffd77"
+  integrity sha512-pQI4cUYb9B+7OX6e3frS+OFZSxfM5ACM4ZjVHFvlIbD+5jteXnPfxULIEyl9PO3wvEQFhLSg1xJfA0XKxQ/PuA==
 
 "@babel/runtime@^7.6.2", "@babel/runtime@^7.6.3":
   version "7.7.7"
