@@ -10,7 +10,8 @@
     "lint": "eslint app/*.js app/*.vue app/**/*.js app/**/*.vue",
     "lint:css": "stylelint '**/*.less' '**/*.jsx' --syntax less",
     "lint:watch": "esw app/*.js app/*.vue src/*.js* src/**/*.js* -w --color --clear",
-    "test": "jest"
+    "test": "jest",
+    "e2e": "cypress run -C false --config video=false,integrationFolder=app,supportFile=false,pluginsFile=false,testFiles=**/*.spec.js"
   },
   "dependencies": {
     "vue": "^2.6.9"
@@ -26,34 +27,37 @@
     "babel-loader": "^8.0.5",
     "css-loader": "^3.4.2",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "file-loader": "^5.0.2",
+    "file-loader": "^5.1.0",
     "html-webpack-plugin": "^3.2.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "vue-loader": "^15.7.1",
+    "vue-loader": "^15.9.0",
     "vue-template-compiler": "^2.6.9",
-    "webpack": "^4.41.0",
-    "webpack-cli": "^3.3.9",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3",
     "yaml-loader": "^0.5.0"
   },
   "optionalDependencies": {
-    "babel-eslint": "^10.0.3",
+    "babel-eslint": "^10.1.0",
+    "cypress": "^4.1.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-plugin-html": "^6.0.0",
-    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-vue": "^6.1.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "husky": "^4.2.3",
     "jest": "^25.1.0",
-    "jest-vue-preprocessor": "^1.5.0",
+    "jest-vue-preprocessor": "^1.7.1",
+    "lint-staged": "^10.0.8",
     "prettier": "^1.19.1",
-    "stylelint": "^13.0.0",
-    "stylelint-config-standard": "^19.0.0",
+    "stylelint": "^13.2.1",
+    "stylelint-config-standard": "^20.0.0",
     "vue-eslint-parser": "^7.0.0"
   },
   "browserslist": [
@@ -71,6 +75,10 @@
     ]
   },
   "eslintConfig": {
+    "ignorePatterns": [
+      "**/*.spec.js",
+      "node_modules/"
+    ],
     "extends": [
       "plugin:vue/essential",
       "plugin:prettier/recommended",
@@ -100,5 +108,16 @@
       "promise/prefer-await-to-then": "error",
       "react/no-unknown-property": "off"
     }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,css,json,md,vue}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
