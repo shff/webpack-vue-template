@@ -54,7 +54,7 @@
     "husky": "^4.2.3",
     "jest": "^25.2.3",
     "jest-vue-preprocessor": "^1.7.1",
-    "lint-staged": "^10.0.8",
+    "lint-staged": "^10.0.9",
     "prettier": "^1.19.1",
     "stylelint": "^13.2.1",
     "stylelint-config-standard": "^20.0.0",
