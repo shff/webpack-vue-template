@@ -17,7 +17,7 @@
     "vue": "^2.6.9"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.4",
+    "@babel/core": "^7.10.5",
     "@babel/plugin-proposal-optional-chaining": "^7.10.4",
     "@babel/plugin-transform-runtime": "^7.10.5",
     "@babel/polyfill": "^7.10.4",
