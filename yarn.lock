@@ -786,10 +786,10 @@
   resolved "https://registry.yarnpkg.com/@babel/preset-stage-1/-/preset-stage-1-7.8.3.tgz#065f2f372ef6798485e5c593386b8d52b193e9d5"
   integrity sha512-ukHsqBrQ+5qex3Lq9HwFjv04lGoiv+a9vXH3q9DDhOIMkH080/DvhB8pU78c09r5NmyFqNL4WR1fGdLy/adKfg==
 
-"@babel/runtime@^7.10.4", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
-  version "7.10.4"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.4.tgz#a6724f1a6b8d2f6ea5236dbfe58c7d7ea9c5eb99"
-  integrity sha512-UpTN5yUJr9b4EX2CnGNWIvER7Ab83ibv0pcvvHc4UOdrBI5jb8bj+32cCwPX6xu0mt2daFNjYhoi+X7beH0RSw==
+"@babel/runtime@^7.10.5", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
+  version "7.10.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.5.tgz#303d8bd440ecd5a491eae6117fd3367698674c5c"
+  integrity sha512-otddXKhdNn7d0ptoFRHtMLa8LqDxLYwTjB4nYgM1yy5N6gU/MUf8zqyyLltCH3yAVitBzmwK4us+DD0l/MauAg==
   dependencies:
     regenerator-runtime "^0.13.4"
 
