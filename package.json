@@ -64,7 +64,7 @@
     "prettier": "^2.1.2",
     "stylelint": "^13.7.2",
     "stylelint-config-standard": "^20.0.0",
-    "vue-eslint-parser": "^7.1.0"
+    "vue-eslint-parser": "^7.1.1"
   },
   "browserslist": [
     ">0.25%",
