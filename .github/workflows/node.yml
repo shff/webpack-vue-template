@@ -12,3 +12,8 @@ jobs:
     - run: yarn build
     - run: yarn lint
     - run: yarn e2e
+    - uses: ridedott/merge-me-action@v2
+      if: ${{ github.event.workflow_run.conclusion == 'success' }}        
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PRESET: DEPENDABOT_MINOR
