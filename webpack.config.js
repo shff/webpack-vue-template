@@ -1,5 +1,5 @@
 const path = require("path");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSPlugin = require("optimize-css-assets-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -14,7 +14,7 @@ module.exports = {
     filename: "main.js",
   },
   plugins: [
-    new ExtractTextPlugin("app.css"),
+    new MiniCssExtractPlugin({ filename: "app.css" }),
     new UglifyJsPlugin(),
     new OptimizeCSSPlugin({ safe: true }),
     new VueLoaderPlugin(),
@@ -52,7 +52,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /(node_modules)/,
         loader: "babel-loader",
-        query: {
+        options: {
           presets: ["@babel/preset-env"],
           plugins: [
             "@babel/plugin-proposal-optional-chaining",
@@ -82,7 +82,10 @@ module.exports = {
       },
       {
         test: /\.ya?ml$/,
-        loader: "json-loader!yaml-loader",
+        use: [
+          "json-loader",
+          "yaml-loader"
+        ]
       },
     ],
   },
