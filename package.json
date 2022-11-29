@@ -23,7 +23,7 @@
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-stage-1": "^7.8.3",
-    "@babel/runtime": "^7.20.1",
+    "@babel/runtime": "^7.20.6",
     "babel-loader": "^9.1.0",
     "css-loader": "^6.7.2",
     "file-loader": "^6.2.0",
