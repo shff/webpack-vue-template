@@ -1001,10 +1001,10 @@
   resolved "https://registry.yarnpkg.com/@babel/preset-stage-1/-/preset-stage-1-7.8.3.tgz#065f2f372ef6798485e5c593386b8d52b193e9d5"
   integrity sha512-ukHsqBrQ+5qex3Lq9HwFjv04lGoiv+a9vXH3q9DDhOIMkH080/DvhB8pU78c09r5NmyFqNL4WR1fGdLy/adKfg==
 
-"@babel/runtime@^7.20.7", "@babel/runtime@^7.8.4":
-  version "7.20.7"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.20.7.tgz#fcb41a5a70550e04a7b708037c7c32f7f356d8fd"
-  integrity sha512-UF0tvkUtxwAgZ5W/KrkHf0Rn0fdnLDU9ScxBrEVNUprE/MzirjK4MJUX1/BVDv00Sv8cljtukVK1aky++X1SjQ==
+"@babel/runtime@^7.20.13", "@babel/runtime@^7.8.4":
+  version "7.20.13"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.20.13.tgz#7055ab8a7cff2b8f6058bf6ae45ff84ad2aded4b"
+  integrity sha512-gt3PKXs0DBoL9xCvOIIZ2NEqAGZqHjAnmVbfQtB620V0uReIQutpel14KcneZuer7UioY8ALKZ7iocavvzTNFA==
   dependencies:
     regenerator-runtime "^0.13.11"
 
