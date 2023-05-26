@@ -5566,10 +5566,10 @@ kleur@^3.0.3:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
 
-klona@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/klona/-/klona-2.0.5.tgz#d166574d90076395d9963aa7a928fabb8d76afbc"
-  integrity sha512-pJiBpiXMbt7dkzXe8Ghj/u4FfXOOa98fPW+bihOJ4SjnoijweJrNThJfd3ifXpXhREjpoF2mZVH1GfS9LV3kHQ==
+klona@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/klona/-/klona-2.0.6.tgz#85bffbf819c03b2f53270412420a4555ef882e22"
+  integrity sha512-dhG34DXATL5hSxJbIexCft8FChFXtmskoZYnoPWjXQuebWYCNkVeV3KkGegCK9CP1oswI/vQibS2GY7Em/sJJA==
 
 known-css-properties@^0.27.0:
   version "0.27.0"
@@ -7779,13 +7779,13 @@ stylelint@^15.6.2:
     v8-compile-cache "^2.3.0"
     write-file-atomic "^5.0.1"
 
-stylus-loader@^7.1.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/stylus-loader/-/stylus-loader-7.1.0.tgz#19e09a98b19075c246e6e3f65e38b8cb89d2d6fb"
-  integrity sha512-gNUEjjozR+oZ8cuC/Fx4LVXqZOgDKvpW9t2hpXHcxjfPYqSjQftaGwZUK+wL9B0QJ26uS6p1EmoWHmvld1dF7g==
+stylus-loader@^7.1.1:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/stylus-loader/-/stylus-loader-7.1.1.tgz#8148822a62c10c2fe000ddaf15a0f2ee64ad8492"
+  integrity sha512-Qw340bf0xABlvMV2+2bHbGgrR6pVbz870jtwYXXjBV7uFHq8lV2k6HmdhJ0dKim8SbyKCRBN1wdbDEnHV9MH5g==
   dependencies:
     fast-glob "^3.2.12"
-    klona "^2.0.5"
+    klona "^2.0.6"
     normalize-path "^3.0.0"
 
 stylus@^0.59.0:
