@@ -62,7 +62,7 @@
     "jest-vue-preprocessor": "^1.7.1",
     "lint-staged": "^13.2.3",
     "prettier": "^2.8.8",
-    "stylelint": "^15.10.1",
+    "stylelint": "^15.10.2",
     "stylelint-config-standard": "^34.0.0",
     "vue-eslint-parser": "^9.3.1"
   },
