@@ -137,17 +137,6 @@
     regexpu-core "^5.3.1"
     semver "^6.3.0"
 
-"@babel/helper-define-polyfill-provider@^0.4.4":
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.4.4.tgz#64df615451cb30e94b59a9696022cffac9a10088"
-  integrity sha512-QcJMILQCu2jm5TFPGA3lCpJJTeEP+mqeXooG/NZbg/h5FTFi6V0+99ahlRsW8/kRLyb24LZVCCiclDedhLKcBA==
-  dependencies:
-    "@babel/helper-compilation-targets" "^7.22.6"
-    "@babel/helper-plugin-utils" "^7.22.5"
-    debug "^4.1.1"
-    lodash.debounce "^4.0.8"
-    resolve "^1.14.2"
-
 "@babel/helper-define-polyfill-provider@^0.5.0":
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@babel/helper-define-polyfill-provider/-/helper-define-polyfill-provider-0.5.0.tgz#465805b7361f461e86c680f1de21eaf88c25901b"
@@ -2433,7 +2422,7 @@ babel-plugin-jest-hoist@^29.6.3:
     "@types/babel__core" "^7.1.14"
     "@types/babel__traverse" "^7.0.6"
 
-babel-plugin-polyfill-corejs2@^0.4.7, babel-plugin-polyfill-corejs2@^0.4.8:
+babel-plugin-polyfill-corejs2@^0.4.8:
   version "0.4.8"
   resolved "https://registry.yarnpkg.com/babel-plugin-polyfill-corejs2/-/babel-plugin-polyfill-corejs2-0.4.8.tgz#dbcc3c8ca758a290d47c3c6a490d59429b0d2269"
   integrity sha512-OtIuQfafSzpo/LhnJaykc0R/MMnuLSSVjVYy9mHArIZ9qTCSZ6TpWCuEKZYVoN//t8HqBNScHrOtCrIK5IaGLg==
@@ -2441,14 +2430,6 @@ babel-plugin-polyfill-corejs2@^0.4.7, babel-plugin-polyfill-corejs2@^0.4.8:
     "@babel/compat-data" "^7.22.6"
     "@babel/helper-define-polyfill-provider" "^0.5.0"
     semver "^6.3.1"
-
-babel-plugin-polyfill-corejs3@^0.8.7:
-  version "0.8.7"
-  resolved "https://registry.yarnpkg.com/babel-plugin-polyfill-corejs3/-/babel-plugin-polyfill-corejs3-0.8.7.tgz#941855aa7fdaac06ed24c730a93450d2b2b76d04"
-  integrity sha512-KyDvZYxAzkC0Aj2dAPyDzi2Ym15e5JKZSK+maI7NAwSqofvuFglbSsxE7wUOvTg9oFVnHMzVzBKcqEb4PJgtOA==
-  dependencies:
-    "@babel/helper-define-polyfill-provider" "^0.4.4"
-    core-js-compat "^3.33.1"
 
 babel-plugin-polyfill-corejs3@^0.9.0:
   version "0.9.0"
@@ -2458,7 +2439,7 @@ babel-plugin-polyfill-corejs3@^0.9.0:
     "@babel/helper-define-polyfill-provider" "^0.5.0"
     core-js-compat "^3.34.0"
 
-babel-plugin-polyfill-regenerator@^0.5.4, babel-plugin-polyfill-regenerator@^0.5.5:
+babel-plugin-polyfill-regenerator@^0.5.5:
   version "0.5.5"
   resolved "https://registry.yarnpkg.com/babel-plugin-polyfill-regenerator/-/babel-plugin-polyfill-regenerator-0.5.5.tgz#8b0c8fc6434239e5d7b8a9d1f832bb2b0310f06a"
   integrity sha512-OJGYZlhLqBh2DDHeqAxWB1XIvr49CxiJ2gIt61/PU55CQK4Z58OzMqjDe1zwQdQk+rBYsRc+1rJmdajM3gimHg==
@@ -3092,14 +3073,7 @@ copy-concurrently@^1.0.0:
     rimraf "^2.5.4"
     run-queue "^1.0.0"
 
-core-js-compat@^3.31.0, core-js-compat@^3.33.1, core-js-compat@^3.34.0:
-  version "3.35.1"
-  resolved "https://registry.yarnpkg.com/core-js-compat/-/core-js-compat-3.35.1.tgz#215247d7edb9e830efa4218ff719beb2803555e2"
-  integrity sha512-sftHa5qUJY3rs9Zht1WEnmkvXputCyDBczPnr7QDgL8n3qrF3CMXY4VPSYtOLLiOUJcah2WNXREd48iOl6mQIw==
-  dependencies:
-    browserslist "^4.22.2"
-
-core-js-compat@^3.34.0:
+core-js-compat@^3.31.0, core-js-compat@^3.34.0:
   version "3.35.1"
   resolved "https://registry.yarnpkg.com/core-js-compat/-/core-js-compat-3.35.1.tgz#215247d7edb9e830efa4218ff719beb2803555e2"
   integrity sha512-sftHa5qUJY3rs9Zht1WEnmkvXputCyDBczPnr7QDgL8n3qrF3CMXY4VPSYtOLLiOUJcah2WNXREd48iOl6mQIw==
@@ -4896,10 +4870,10 @@ human-signals@^5.0.0:
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-5.0.0.tgz#42665a284f9ae0dade3ba41ebc37eb4b852f3a28"
   integrity sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==
 
-husky@^9.0.6:
-  version "9.0.6"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-9.0.6.tgz#cee0245d60480b12279cf492ec6cfc1aeb7fa759"
-  integrity sha512-EEuw/rfTiMjOfuL7pGO/i9otg1u36TXxqjIA6D9qxVjd/UXoDOsLor/BSFf5hTK50shwzCU3aVVwdXDp/lp7RA==
+husky@^9.0.7:
+  version "9.0.7"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-9.0.7.tgz#047f24ec1b6c681206af714b4217c13ee97fff20"
+  integrity sha512-vWdusw+y12DUEeoZqW1kplOFqk3tedGV8qlga8/SF6a3lOiWLqGZZQvfWvY0fQYdfiRi/u1DFNpudTSV9l1aCg==
 
 iconv-lite@0.4.24:
   version "0.4.24"
